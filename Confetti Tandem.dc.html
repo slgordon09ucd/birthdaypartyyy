@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap">
+<style>html,body{margin:0;padding:0;background:#F4EFE6}a{color:oklch(0.55 0.14 250);text-decoration:none}a:hover{color:oklch(0.45 0.14 250)}</style>
+<script>window.OM_SCENES = '[{"name":"Roll in","dur":10,"desc":"The confetti tandem eases in from off the left edge and settles in the centre of the frame.","nat":10},{"name":"Cruise","dur":14.4,"desc":"The tandem holds centre frame while the landscape pans past: wheels spin, the timing chain drives both crank sets, confetti sprays off both wheels.","nat":10},{"name":"Roll out","dur":8.8,"desc":"The tandem accelerates away to the right and leaves the frame; the empty road rolls on.","nat":10}]';</script>
+<script>window.OM_PLAYBACK = '{"mode":"loop"}';</script>
+</helmet>
+<x-import component-from-global-scope="TandemVideo" from="./animations-v3.jsx ./tandem-scene.jsx" ink="{{ ink }}" confetti="{{ confetti }}" hint-size="100%,100%"></x-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;motionEditor&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;ink&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#23201C&quot;,&quot;options&quot;:[&quot;#23201C&quot;,&quot;oklch(0.45 0.12 250)&quot;,&quot;oklch(0.45 0.14 25)&quot;,&quot;oklch(0.42 0.09 150)&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;confetti&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      ink: this.props.ink ?? '#23201C',
+      confetti: this.props.confetti ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>
